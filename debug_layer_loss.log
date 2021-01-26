@@ -1,0 +1,1210 @@
+2020-12-31 16:47:35,676 The args: Namespace(aug_train=False, cache_dir='', data_dir='data/trec', data_url='', do_eval=False, do_lower_case=True, eval_batch_size=32, eval_step=50, gradient_accumulation_steps=1, learning_rate=5e-05, max_seq_length=256, no_cuda=False, num_train_epochs=5.0, output_dir='student_output_first_trec', pred_distill=False, seed=42, student_model='data/2nd_General_TinyBERT_4L_312D/', task_name='mrpc', teacher_model='/root/program/transformers/transfer_trec_20200706_02', temperature=1.0, train_batch_size=12, warmup_proportion=0.1, weight_decay=0.0001)
+2020-12-31 16:47:35,686 device: cuda n_gpu: 1
+2020-12-31 16:50:05,288 The args: Namespace(aug_train=False, cache_dir='', data_dir='data/trec', data_url='', do_eval=False, do_lower_case=True, eval_batch_size=32, eval_step=50, gradient_accumulation_steps=1, learning_rate=5e-05, max_seq_length=256, no_cuda=False, num_train_epochs=5.0, output_dir='student_output_first_trec', pred_distill=False, seed=42, student_model='data/General_TinyBERT_4L_312D', task_name='mrpc', teacher_model='/root/program/transformers/transfer_trec_20200706_02', temperature=1.0, train_batch_size=12, warmup_proportion=0.1, weight_decay=0.0001)
+2020-12-31 16:50:05,298 device: cuda n_gpu: 1
+2020-12-31 16:50:05,667 Writing example 0 of 53417
+2020-12-31 16:50:05,668 *** Example ***
+2020-12-31 16:50:05,668 guid: train-0
+2020-12-31 16:50:05,668 tokens: [CLS] who is the author of the book , ` ` the iron lady : a biography of margaret thatcher ' ' ? [SEP] the iron lady ; a biography of margaret thatcher by hugo young - l ##rb - far ##rar , st ##raus & giro ##ux - rr ##b - [SEP]
+2020-12-31 16:50:05,668 input_ids: 101 2040 2003 1996 3166 1997 1996 2338 1010 1036 1036 1996 3707 3203 1024 1037 8308 1997 5545 21127 1005 1005 1029 102 1996 3707 3203 1025 1037 8308 1997 5545 21127 2011 9395 2402 1011 1048 15185 1011 2521 19848 1010 2358 25965 1004 19226 5602 1011 25269 2497 1011 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 16:50:05,668 input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 16:50:05,668 segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 16:50:05,668 label: 1
+2020-12-31 16:50:05,668 label_id: 1
+2020-12-31 16:50:13,362 Writing example 10000 of 53417
+2020-12-31 16:50:20,151 Writing example 20000 of 53417
+2020-12-31 16:50:27,377 Writing example 30000 of 53417
+2020-12-31 16:50:33,969 Writing example 40000 of 53417
+2020-12-31 16:50:41,073 Writing example 50000 of 53417
+2020-12-31 16:50:44,126 Writing example 0 of 1442
+2020-12-31 16:50:44,126 *** Example ***
+2020-12-31 16:50:44,126 guid: dev-0
+2020-12-31 16:50:44,126 tokens: [CLS] what do practitioners of wi ##cca worship ? [SEP] an estimated 50 , 000 americans practice wi ##cca , a form of poly ##the ##istic nature worship . [SEP]
+2020-12-31 16:50:44,127 input_ids: 101 2054 2079 14617 1997 15536 16665 7425 1029 102 2019 4358 2753 1010 2199 4841 3218 15536 16665 1010 1037 2433 1997 26572 10760 6553 3267 7425 1012 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 16:50:44,127 input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 16:50:44,127 segment_ids: 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 16:50:44,127 label: 1
+2020-12-31 16:50:44,127 label_id: 1
+2020-12-31 16:51:24,943 The args: Namespace(aug_train=False, cache_dir='', data_dir='data/trec', data_url='', do_eval=False, do_lower_case=True, eval_batch_size=32, eval_step=50, gradient_accumulation_steps=1, learning_rate=5e-05, max_seq_length=256, no_cuda=False, num_train_epochs=5.0, output_dir='student_output_first_trec', pred_distill=False, seed=42, student_model='data/General_TinyBERT_4L_312D', task_name='mrpc', teacher_model='/root/program/embedding/bert_pretrained_model/tanda_bert_base_asnq_torch', temperature=1.0, train_batch_size=12, warmup_proportion=0.1, weight_decay=0.0001)
+2020-12-31 16:51:24,952 device: cuda n_gpu: 1
+2020-12-31 16:51:25,281 Writing example 0 of 53417
+2020-12-31 16:51:25,282 *** Example ***
+2020-12-31 16:51:25,282 guid: train-0
+2020-12-31 16:51:25,282 tokens: [CLS] who is the author of the book , ` ` the iron lady : a biography of margaret thatcher ' ' ? [SEP] the iron lady ; a biography of margaret thatcher by hugo young - l ##rb - far ##rar , st ##raus & giro ##ux - rr ##b - [SEP]
+2020-12-31 16:51:25,282 input_ids: 101 2040 2003 1996 3166 1997 1996 2338 1010 1036 1036 1996 3707 3203 1024 1037 8308 1997 5545 21127 1005 1005 1029 102 1996 3707 3203 1025 1037 8308 1997 5545 21127 2011 9395 2402 1011 1048 15185 1011 2521 19848 1010 2358 25965 1004 19226 5602 1011 25269 2497 1011 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 16:51:25,282 input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 16:51:25,282 segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 16:51:25,282 label: 1
+2020-12-31 16:51:25,282 label_id: 1
+2020-12-31 16:51:32,905 Writing example 10000 of 53417
+2020-12-31 16:51:39,666 Writing example 20000 of 53417
+2020-12-31 16:51:46,766 Writing example 30000 of 53417
+2020-12-31 16:51:53,286 Writing example 40000 of 53417
+2020-12-31 16:52:00,296 Writing example 50000 of 53417
+2020-12-31 16:52:03,250 Writing example 0 of 1442
+2020-12-31 16:52:03,251 *** Example ***
+2020-12-31 16:52:03,251 guid: dev-0
+2020-12-31 16:52:03,251 tokens: [CLS] what do practitioners of wi ##cca worship ? [SEP] an estimated 50 , 000 americans practice wi ##cca , a form of poly ##the ##istic nature worship . [SEP]
+2020-12-31 16:52:03,251 input_ids: 101 2054 2079 14617 1997 15536 16665 7425 1029 102 2019 4358 2753 1010 2199 4841 3218 15536 16665 1010 1037 2433 1997 26572 10760 6553 3267 7425 1012 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 16:52:03,251 input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 16:52:03,251 segment_ids: 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 16:52:03,251 label: 1
+2020-12-31 16:52:03,251 label_id: 1
+2020-12-31 16:52:04,171 Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pre_trained": "",
+  "training": "",
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+2020-12-31 16:52:06,993 Loading model /root/program/embedding/bert_pretrained_model/tanda_bert_base_asnq_torch/pytorch_model.bin
+2020-12-31 16:52:07,694 loading model...
+2020-12-31 16:52:07,937 done!
+2020-12-31 16:52:07,938 Weights of TinyBertForSequenceClassification not initialized from pretrained model: ['fit_dense.weight', 'fit_dense.bias']
+2020-12-31 16:52:13,103 Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "cell": {},
+  "emb_size": 312,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 312,
+  "initializer_range": 0.02,
+  "intermediate_size": 1200,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 4,
+  "pre_trained": "",
+  "structure": [],
+  "training": "",
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+2020-12-31 16:52:13,515 Loading model data/General_TinyBERT_4L_312D/pytorch_model.bin
+2020-12-31 16:52:13,557 loading model...
+2020-12-31 16:52:13,626 done!
+2020-12-31 16:52:13,626 Weights of TinyBertForSequenceClassification not initialized from pretrained model: ['classifier.weight', 'classifier.bias']
+2020-12-31 16:52:13,626 Weights from pretrained model not used in TinyBertForSequenceClassification: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias']
+2020-12-31 16:52:13,655 ***** Running training *****
+2020-12-31 16:52:13,656   Num examples = 53417
+2020-12-31 16:52:13,656   Batch size = 12
+2020-12-31 16:52:13,656   Num steps = 22255
+2020-12-31 16:52:13,657 n: bert.embeddings.word_embeddings.weight
+2020-12-31 16:52:13,657 n: bert.embeddings.position_embeddings.weight
+2020-12-31 16:52:13,657 n: bert.embeddings.token_type_embeddings.weight
+2020-12-31 16:52:13,657 n: bert.embeddings.LayerNorm.weight
+2020-12-31 16:52:13,657 n: bert.embeddings.LayerNorm.bias
+2020-12-31 16:52:13,657 n: bert.encoder.layer.0.attention.self.query.weight
+2020-12-31 16:52:13,657 n: bert.encoder.layer.0.attention.self.query.bias
+2020-12-31 16:52:13,657 n: bert.encoder.layer.0.attention.self.key.weight
+2020-12-31 16:52:13,658 n: bert.encoder.layer.0.attention.self.key.bias
+2020-12-31 16:52:13,658 n: bert.encoder.layer.0.attention.self.value.weight
+2020-12-31 16:52:13,658 n: bert.encoder.layer.0.attention.self.value.bias
+2020-12-31 16:52:13,658 n: bert.encoder.layer.0.attention.output.dense.weight
+2020-12-31 16:52:13,658 n: bert.encoder.layer.0.attention.output.dense.bias
+2020-12-31 16:52:13,658 n: bert.encoder.layer.0.attention.output.LayerNorm.weight
+2020-12-31 16:52:13,658 n: bert.encoder.layer.0.attention.output.LayerNorm.bias
+2020-12-31 16:52:13,658 n: bert.encoder.layer.0.intermediate.dense.weight
+2020-12-31 16:52:13,658 n: bert.encoder.layer.0.intermediate.dense.bias
+2020-12-31 16:52:13,658 n: bert.encoder.layer.0.output.dense.weight
+2020-12-31 16:52:13,658 n: bert.encoder.layer.0.output.dense.bias
+2020-12-31 16:52:13,658 n: bert.encoder.layer.0.output.LayerNorm.weight
+2020-12-31 16:52:13,658 n: bert.encoder.layer.0.output.LayerNorm.bias
+2020-12-31 16:52:13,658 n: bert.encoder.layer.1.attention.self.query.weight
+2020-12-31 16:52:13,658 n: bert.encoder.layer.1.attention.self.query.bias
+2020-12-31 16:52:13,658 n: bert.encoder.layer.1.attention.self.key.weight
+2020-12-31 16:52:13,658 n: bert.encoder.layer.1.attention.self.key.bias
+2020-12-31 16:52:13,658 n: bert.encoder.layer.1.attention.self.value.weight
+2020-12-31 16:52:13,658 n: bert.encoder.layer.1.attention.self.value.bias
+2020-12-31 16:52:13,659 n: bert.encoder.layer.1.attention.output.dense.weight
+2020-12-31 16:52:13,659 n: bert.encoder.layer.1.attention.output.dense.bias
+2020-12-31 16:52:13,659 n: bert.encoder.layer.1.attention.output.LayerNorm.weight
+2020-12-31 16:52:13,659 n: bert.encoder.layer.1.attention.output.LayerNorm.bias
+2020-12-31 16:52:13,659 n: bert.encoder.layer.1.intermediate.dense.weight
+2020-12-31 16:52:13,659 n: bert.encoder.layer.1.intermediate.dense.bias
+2020-12-31 16:52:13,659 n: bert.encoder.layer.1.output.dense.weight
+2020-12-31 16:52:13,659 n: bert.encoder.layer.1.output.dense.bias
+2020-12-31 16:52:13,659 n: bert.encoder.layer.1.output.LayerNorm.weight
+2020-12-31 16:52:13,659 n: bert.encoder.layer.1.output.LayerNorm.bias
+2020-12-31 16:52:13,659 n: bert.encoder.layer.2.attention.self.query.weight
+2020-12-31 16:52:13,659 n: bert.encoder.layer.2.attention.self.query.bias
+2020-12-31 16:52:13,659 n: bert.encoder.layer.2.attention.self.key.weight
+2020-12-31 16:52:13,659 n: bert.encoder.layer.2.attention.self.key.bias
+2020-12-31 16:52:13,659 n: bert.encoder.layer.2.attention.self.value.weight
+2020-12-31 16:52:13,659 n: bert.encoder.layer.2.attention.self.value.bias
+2020-12-31 16:52:13,659 n: bert.encoder.layer.2.attention.output.dense.weight
+2020-12-31 16:52:13,659 n: bert.encoder.layer.2.attention.output.dense.bias
+2020-12-31 16:52:13,659 n: bert.encoder.layer.2.attention.output.LayerNorm.weight
+2020-12-31 16:52:13,660 n: bert.encoder.layer.2.attention.output.LayerNorm.bias
+2020-12-31 16:52:13,660 n: bert.encoder.layer.2.intermediate.dense.weight
+2020-12-31 16:52:13,660 n: bert.encoder.layer.2.intermediate.dense.bias
+2020-12-31 16:52:13,660 n: bert.encoder.layer.2.output.dense.weight
+2020-12-31 16:52:13,660 n: bert.encoder.layer.2.output.dense.bias
+2020-12-31 16:52:13,660 n: bert.encoder.layer.2.output.LayerNorm.weight
+2020-12-31 16:52:13,660 n: bert.encoder.layer.2.output.LayerNorm.bias
+2020-12-31 16:52:13,660 n: bert.encoder.layer.3.attention.self.query.weight
+2020-12-31 16:52:13,660 n: bert.encoder.layer.3.attention.self.query.bias
+2020-12-31 16:52:13,660 n: bert.encoder.layer.3.attention.self.key.weight
+2020-12-31 16:52:13,660 n: bert.encoder.layer.3.attention.self.key.bias
+2020-12-31 16:52:13,660 n: bert.encoder.layer.3.attention.self.value.weight
+2020-12-31 16:52:13,660 n: bert.encoder.layer.3.attention.self.value.bias
+2020-12-31 16:52:13,660 n: bert.encoder.layer.3.attention.output.dense.weight
+2020-12-31 16:52:13,660 n: bert.encoder.layer.3.attention.output.dense.bias
+2020-12-31 16:52:13,660 n: bert.encoder.layer.3.attention.output.LayerNorm.weight
+2020-12-31 16:52:13,660 n: bert.encoder.layer.3.attention.output.LayerNorm.bias
+2020-12-31 16:52:13,660 n: bert.encoder.layer.3.intermediate.dense.weight
+2020-12-31 16:52:13,660 n: bert.encoder.layer.3.intermediate.dense.bias
+2020-12-31 16:52:13,660 n: bert.encoder.layer.3.output.dense.weight
+2020-12-31 16:52:13,661 n: bert.encoder.layer.3.output.dense.bias
+2020-12-31 16:52:13,661 n: bert.encoder.layer.3.output.LayerNorm.weight
+2020-12-31 16:52:13,661 n: bert.encoder.layer.3.output.LayerNorm.bias
+2020-12-31 16:52:13,661 n: bert.pooler.dense.weight
+2020-12-31 16:52:13,661 n: bert.pooler.dense.bias
+2020-12-31 16:52:13,661 n: classifier.weight
+2020-12-31 16:52:13,661 n: classifier.bias
+2020-12-31 16:52:13,661 n: fit_dense.weight
+2020-12-31 16:52:13,661 n: fit_dense.bias
+2020-12-31 16:52:13,661 Total parameters: 14591258
+2020-12-31 16:52:47,850 The args: Namespace(aug_train=False, cache_dir='', data_dir='data/trec', data_url='', do_eval=False, do_lower_case=True, eval_batch_size=32, eval_step=50, gradient_accumulation_steps=1, learning_rate=5e-05, max_seq_length=256, no_cuda=False, num_train_epochs=5.0, output_dir='student_output_first_trec', pred_distill=False, seed=42, student_model='data/General_TinyBERT_4L_312D', task_name='mrpc', teacher_model='/root/program/embedding/bert_pretrained_model/tanda_bert_base_asnq_torch', temperature=1.0, train_batch_size=12, warmup_proportion=0.1, weight_decay=0.0001)
+2020-12-31 16:52:47,860 device: cuda n_gpu: 1
+2020-12-31 16:52:48,205 Writing example 0 of 53417
+2020-12-31 16:52:48,206 *** Example ***
+2020-12-31 16:52:48,206 guid: train-0
+2020-12-31 16:52:48,206 tokens: [CLS] who is the author of the book , ` ` the iron lady : a biography of margaret thatcher ' ' ? [SEP] the iron lady ; a biography of margaret thatcher by hugo young - l ##rb - far ##rar , st ##raus & giro ##ux - rr ##b - [SEP]
+2020-12-31 16:52:48,206 input_ids: 101 2040 2003 1996 3166 1997 1996 2338 1010 1036 1036 1996 3707 3203 1024 1037 8308 1997 5545 21127 1005 1005 1029 102 1996 3707 3203 1025 1037 8308 1997 5545 21127 2011 9395 2402 1011 1048 15185 1011 2521 19848 1010 2358 25965 1004 19226 5602 1011 25269 2497 1011 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 16:52:48,206 input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 16:52:48,207 segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 16:52:48,207 label: 1
+2020-12-31 16:52:48,207 label_id: 1
+2020-12-31 16:52:55,952 Writing example 10000 of 53417
+2020-12-31 16:53:02,819 Writing example 20000 of 53417
+2020-12-31 16:53:10,047 Writing example 30000 of 53417
+2020-12-31 16:53:16,682 Writing example 40000 of 53417
+2020-12-31 16:53:23,843 Writing example 50000 of 53417
+2020-12-31 16:53:26,891 Writing example 0 of 1442
+2020-12-31 16:53:26,891 *** Example ***
+2020-12-31 16:53:26,891 guid: dev-0
+2020-12-31 16:53:26,892 tokens: [CLS] what do practitioners of wi ##cca worship ? [SEP] an estimated 50 , 000 americans practice wi ##cca , a form of poly ##the ##istic nature worship . [SEP]
+2020-12-31 16:53:26,892 input_ids: 101 2054 2079 14617 1997 15536 16665 7425 1029 102 2019 4358 2753 1010 2199 4841 3218 15536 16665 1010 1037 2433 1997 26572 10760 6553 3267 7425 1012 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 16:53:26,892 input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 16:53:26,892 segment_ids: 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 16:53:26,892 label: 1
+2020-12-31 16:53:26,892 label_id: 1
+2020-12-31 16:53:27,829 Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pre_trained": "",
+  "training": "",
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+2020-12-31 16:53:30,627 Loading model /root/program/embedding/bert_pretrained_model/tanda_bert_base_asnq_torch/pytorch_model.bin
+2020-12-31 16:53:30,901 loading model...
+2020-12-31 16:53:31,157 done!
+2020-12-31 16:53:31,157 Weights of TinyBertForSequenceClassification not initialized from pretrained model: ['fit_dense.weight', 'fit_dense.bias']
+2020-12-31 16:53:36,106 Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "cell": {},
+  "emb_size": 312,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 312,
+  "initializer_range": 0.02,
+  "intermediate_size": 1200,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 4,
+  "pre_trained": "",
+  "structure": [],
+  "training": "",
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+2020-12-31 16:53:36,507 Loading model data/General_TinyBERT_4L_312D/pytorch_model.bin
+2020-12-31 16:53:36,550 loading model...
+2020-12-31 16:53:36,556 done!
+2020-12-31 16:53:36,557 Weights of TinyBertForSequenceClassification not initialized from pretrained model: ['classifier.weight', 'classifier.bias']
+2020-12-31 16:53:36,557 Weights from pretrained model not used in TinyBertForSequenceClassification: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias']
+2020-12-31 16:53:36,587 ***** Running training *****
+2020-12-31 16:53:36,587   Num examples = 53417
+2020-12-31 16:53:36,588   Batch size = 12
+2020-12-31 16:53:36,588   Num steps = 22255
+2020-12-31 16:53:36,589 n: bert.embeddings.word_embeddings.weight
+2020-12-31 16:53:36,589 n: bert.embeddings.position_embeddings.weight
+2020-12-31 16:53:36,589 n: bert.embeddings.token_type_embeddings.weight
+2020-12-31 16:53:36,589 n: bert.embeddings.LayerNorm.weight
+2020-12-31 16:53:36,589 n: bert.embeddings.LayerNorm.bias
+2020-12-31 16:53:36,589 n: bert.encoder.layer.0.attention.self.query.weight
+2020-12-31 16:53:36,589 n: bert.encoder.layer.0.attention.self.query.bias
+2020-12-31 16:53:36,589 n: bert.encoder.layer.0.attention.self.key.weight
+2020-12-31 16:53:36,589 n: bert.encoder.layer.0.attention.self.key.bias
+2020-12-31 16:53:36,589 n: bert.encoder.layer.0.attention.self.value.weight
+2020-12-31 16:53:36,589 n: bert.encoder.layer.0.attention.self.value.bias
+2020-12-31 16:53:36,589 n: bert.encoder.layer.0.attention.output.dense.weight
+2020-12-31 16:53:36,589 n: bert.encoder.layer.0.attention.output.dense.bias
+2020-12-31 16:53:36,589 n: bert.encoder.layer.0.attention.output.LayerNorm.weight
+2020-12-31 16:53:36,590 n: bert.encoder.layer.0.attention.output.LayerNorm.bias
+2020-12-31 16:53:36,590 n: bert.encoder.layer.0.intermediate.dense.weight
+2020-12-31 16:53:36,590 n: bert.encoder.layer.0.intermediate.dense.bias
+2020-12-31 16:53:36,590 n: bert.encoder.layer.0.output.dense.weight
+2020-12-31 16:53:36,590 n: bert.encoder.layer.0.output.dense.bias
+2020-12-31 16:53:36,590 n: bert.encoder.layer.0.output.LayerNorm.weight
+2020-12-31 16:53:36,590 n: bert.encoder.layer.0.output.LayerNorm.bias
+2020-12-31 16:53:36,590 n: bert.encoder.layer.1.attention.self.query.weight
+2020-12-31 16:53:36,590 n: bert.encoder.layer.1.attention.self.query.bias
+2020-12-31 16:53:36,590 n: bert.encoder.layer.1.attention.self.key.weight
+2020-12-31 16:53:36,590 n: bert.encoder.layer.1.attention.self.key.bias
+2020-12-31 16:53:36,590 n: bert.encoder.layer.1.attention.self.value.weight
+2020-12-31 16:53:36,590 n: bert.encoder.layer.1.attention.self.value.bias
+2020-12-31 16:53:36,590 n: bert.encoder.layer.1.attention.output.dense.weight
+2020-12-31 16:53:36,590 n: bert.encoder.layer.1.attention.output.dense.bias
+2020-12-31 16:53:36,590 n: bert.encoder.layer.1.attention.output.LayerNorm.weight
+2020-12-31 16:53:36,590 n: bert.encoder.layer.1.attention.output.LayerNorm.bias
+2020-12-31 16:53:36,590 n: bert.encoder.layer.1.intermediate.dense.weight
+2020-12-31 16:53:36,591 n: bert.encoder.layer.1.intermediate.dense.bias
+2020-12-31 16:53:36,591 n: bert.encoder.layer.1.output.dense.weight
+2020-12-31 16:53:36,591 n: bert.encoder.layer.1.output.dense.bias
+2020-12-31 16:53:36,591 n: bert.encoder.layer.1.output.LayerNorm.weight
+2020-12-31 16:53:36,591 n: bert.encoder.layer.1.output.LayerNorm.bias
+2020-12-31 16:53:36,591 n: bert.encoder.layer.2.attention.self.query.weight
+2020-12-31 16:53:36,591 n: bert.encoder.layer.2.attention.self.query.bias
+2020-12-31 16:53:36,591 n: bert.encoder.layer.2.attention.self.key.weight
+2020-12-31 16:53:36,591 n: bert.encoder.layer.2.attention.self.key.bias
+2020-12-31 16:53:36,591 n: bert.encoder.layer.2.attention.self.value.weight
+2020-12-31 16:53:36,591 n: bert.encoder.layer.2.attention.self.value.bias
+2020-12-31 16:53:36,591 n: bert.encoder.layer.2.attention.output.dense.weight
+2020-12-31 16:53:36,591 n: bert.encoder.layer.2.attention.output.dense.bias
+2020-12-31 16:53:36,591 n: bert.encoder.layer.2.attention.output.LayerNorm.weight
+2020-12-31 16:53:36,591 n: bert.encoder.layer.2.attention.output.LayerNorm.bias
+2020-12-31 16:53:36,591 n: bert.encoder.layer.2.intermediate.dense.weight
+2020-12-31 16:53:36,591 n: bert.encoder.layer.2.intermediate.dense.bias
+2020-12-31 16:53:36,591 n: bert.encoder.layer.2.output.dense.weight
+2020-12-31 16:53:36,591 n: bert.encoder.layer.2.output.dense.bias
+2020-12-31 16:53:36,591 n: bert.encoder.layer.2.output.LayerNorm.weight
+2020-12-31 16:53:36,592 n: bert.encoder.layer.2.output.LayerNorm.bias
+2020-12-31 16:53:36,592 n: bert.encoder.layer.3.attention.self.query.weight
+2020-12-31 16:53:36,592 n: bert.encoder.layer.3.attention.self.query.bias
+2020-12-31 16:53:36,592 n: bert.encoder.layer.3.attention.self.key.weight
+2020-12-31 16:53:36,592 n: bert.encoder.layer.3.attention.self.key.bias
+2020-12-31 16:53:36,592 n: bert.encoder.layer.3.attention.self.value.weight
+2020-12-31 16:53:36,592 n: bert.encoder.layer.3.attention.self.value.bias
+2020-12-31 16:53:36,592 n: bert.encoder.layer.3.attention.output.dense.weight
+2020-12-31 16:53:36,592 n: bert.encoder.layer.3.attention.output.dense.bias
+2020-12-31 16:53:36,592 n: bert.encoder.layer.3.attention.output.LayerNorm.weight
+2020-12-31 16:53:36,592 n: bert.encoder.layer.3.attention.output.LayerNorm.bias
+2020-12-31 16:53:36,592 n: bert.encoder.layer.3.intermediate.dense.weight
+2020-12-31 16:53:36,592 n: bert.encoder.layer.3.intermediate.dense.bias
+2020-12-31 16:53:36,592 n: bert.encoder.layer.3.output.dense.weight
+2020-12-31 16:53:36,592 n: bert.encoder.layer.3.output.dense.bias
+2020-12-31 16:53:36,592 n: bert.encoder.layer.3.output.LayerNorm.weight
+2020-12-31 16:53:36,592 n: bert.encoder.layer.3.output.LayerNorm.bias
+2020-12-31 16:53:36,592 n: bert.pooler.dense.weight
+2020-12-31 16:53:36,592 n: bert.pooler.dense.bias
+2020-12-31 16:53:36,592 n: classifier.weight
+2020-12-31 16:53:36,593 n: classifier.bias
+2020-12-31 16:53:36,593 n: fit_dense.weight
+2020-12-31 16:53:36,593 n: fit_dense.bias
+2020-12-31 16:53:36,593 Total parameters: 14591258
+2020-12-31 17:13:03,377 The args: Namespace(aug_train=False, cache_dir='', data_dir='data/trec', data_url='', do_eval=False, do_lower_case=True, eval_batch_size=32, eval_step=50, gradient_accumulation_steps=1, learning_rate=5e-05, max_seq_length=256, no_cuda=False, num_train_epochs=5.0, output_dir='student_output_first_trec', pred_distill=False, seed=42, student_model='data/General_TinyBERT_4L_312D', task_name='mrpc', teacher_model='/root/program/embedding/bert_pretrained_model/tanda_bert_base_asnq_torch', temperature=1.0, train_batch_size=12, warmup_proportion=0.1, weight_decay=0.0001)
+2020-12-31 17:13:03,386 device: cuda n_gpu: 1
+2020-12-31 17:13:03,731 Writing example 0 of 53417
+2020-12-31 17:13:03,732 *** Example ***
+2020-12-31 17:13:03,732 guid: train-0
+2020-12-31 17:13:03,732 tokens: [CLS] who is the author of the book , ` ` the iron lady : a biography of margaret thatcher ' ' ? [SEP] the iron lady ; a biography of margaret thatcher by hugo young - l ##rb - far ##rar , st ##raus & giro ##ux - rr ##b - [SEP]
+2020-12-31 17:13:03,732 input_ids: 101 2040 2003 1996 3166 1997 1996 2338 1010 1036 1036 1996 3707 3203 1024 1037 8308 1997 5545 21127 1005 1005 1029 102 1996 3707 3203 1025 1037 8308 1997 5545 21127 2011 9395 2402 1011 1048 15185 1011 2521 19848 1010 2358 25965 1004 19226 5602 1011 25269 2497 1011 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 17:13:03,733 input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 17:13:03,733 segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 17:13:03,733 label: 1
+2020-12-31 17:13:03,733 label_id: 1
+2020-12-31 17:13:11,503 Writing example 10000 of 53417
+2020-12-31 17:13:18,368 Writing example 20000 of 53417
+2020-12-31 17:13:25,584 Writing example 30000 of 53417
+2020-12-31 17:13:32,227 Writing example 40000 of 53417
+2020-12-31 17:13:39,343 Writing example 50000 of 53417
+2020-12-31 17:13:42,384 Writing example 0 of 1442
+2020-12-31 17:13:42,384 *** Example ***
+2020-12-31 17:13:42,384 guid: dev-0
+2020-12-31 17:13:42,385 tokens: [CLS] what do practitioners of wi ##cca worship ? [SEP] an estimated 50 , 000 americans practice wi ##cca , a form of poly ##the ##istic nature worship . [SEP]
+2020-12-31 17:13:42,385 input_ids: 101 2054 2079 14617 1997 15536 16665 7425 1029 102 2019 4358 2753 1010 2199 4841 3218 15536 16665 1010 1037 2433 1997 26572 10760 6553 3267 7425 1012 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 17:13:42,385 input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 17:13:42,385 segment_ids: 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 17:13:42,385 label: 1
+2020-12-31 17:13:42,385 label_id: 1
+2020-12-31 17:13:43,316 Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pre_trained": "",
+  "training": "",
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+2020-12-31 17:13:46,104 Loading model /root/program/embedding/bert_pretrained_model/tanda_bert_base_asnq_torch/pytorch_model.bin
+2020-12-31 17:13:46,380 loading model...
+2020-12-31 17:13:46,621 done!
+2020-12-31 17:13:46,622 Weights of TinyBertForSequenceClassification not initialized from pretrained model: ['fit_dense.weight', 'fit_dense.bias']
+2020-12-31 17:13:51,424 Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "cell": {},
+  "emb_size": 312,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 312,
+  "initializer_range": 0.02,
+  "intermediate_size": 1200,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 4,
+  "pre_trained": "",
+  "structure": [],
+  "training": "",
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+2020-12-31 17:13:51,820 Loading model data/General_TinyBERT_4L_312D/pytorch_model.bin
+2020-12-31 17:13:51,867 loading model...
+2020-12-31 17:13:51,873 done!
+2020-12-31 17:13:51,873 Weights of TinyBertForSequenceClassification not initialized from pretrained model: ['classifier.weight', 'classifier.bias']
+2020-12-31 17:13:51,873 Weights from pretrained model not used in TinyBertForSequenceClassification: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias']
+2020-12-31 17:13:51,901 ***** Running training *****
+2020-12-31 17:13:51,901   Num examples = 53417
+2020-12-31 17:13:51,902   Batch size = 12
+2020-12-31 17:13:51,902   Num steps = 22255
+2020-12-31 17:13:51,903 n: bert.embeddings.word_embeddings.weight
+2020-12-31 17:13:51,903 n: bert.embeddings.position_embeddings.weight
+2020-12-31 17:13:51,903 n: bert.embeddings.token_type_embeddings.weight
+2020-12-31 17:13:51,903 n: bert.embeddings.LayerNorm.weight
+2020-12-31 17:13:51,903 n: bert.embeddings.LayerNorm.bias
+2020-12-31 17:13:51,903 n: bert.encoder.layer.0.attention.self.query.weight
+2020-12-31 17:13:51,903 n: bert.encoder.layer.0.attention.self.query.bias
+2020-12-31 17:13:51,903 n: bert.encoder.layer.0.attention.self.key.weight
+2020-12-31 17:13:51,903 n: bert.encoder.layer.0.attention.self.key.bias
+2020-12-31 17:13:51,903 n: bert.encoder.layer.0.attention.self.value.weight
+2020-12-31 17:13:51,903 n: bert.encoder.layer.0.attention.self.value.bias
+2020-12-31 17:13:51,903 n: bert.encoder.layer.0.attention.output.dense.weight
+2020-12-31 17:13:51,903 n: bert.encoder.layer.0.attention.output.dense.bias
+2020-12-31 17:13:51,903 n: bert.encoder.layer.0.attention.output.LayerNorm.weight
+2020-12-31 17:13:51,903 n: bert.encoder.layer.0.attention.output.LayerNorm.bias
+2020-12-31 17:13:51,904 n: bert.encoder.layer.0.intermediate.dense.weight
+2020-12-31 17:13:51,904 n: bert.encoder.layer.0.intermediate.dense.bias
+2020-12-31 17:13:51,904 n: bert.encoder.layer.0.output.dense.weight
+2020-12-31 17:13:51,904 n: bert.encoder.layer.0.output.dense.bias
+2020-12-31 17:13:51,904 n: bert.encoder.layer.0.output.LayerNorm.weight
+2020-12-31 17:13:51,904 n: bert.encoder.layer.0.output.LayerNorm.bias
+2020-12-31 17:13:51,904 n: bert.encoder.layer.1.attention.self.query.weight
+2020-12-31 17:13:51,904 n: bert.encoder.layer.1.attention.self.query.bias
+2020-12-31 17:13:51,904 n: bert.encoder.layer.1.attention.self.key.weight
+2020-12-31 17:13:51,904 n: bert.encoder.layer.1.attention.self.key.bias
+2020-12-31 17:13:51,904 n: bert.encoder.layer.1.attention.self.value.weight
+2020-12-31 17:13:51,904 n: bert.encoder.layer.1.attention.self.value.bias
+2020-12-31 17:13:51,904 n: bert.encoder.layer.1.attention.output.dense.weight
+2020-12-31 17:13:51,904 n: bert.encoder.layer.1.attention.output.dense.bias
+2020-12-31 17:13:51,904 n: bert.encoder.layer.1.attention.output.LayerNorm.weight
+2020-12-31 17:13:51,904 n: bert.encoder.layer.1.attention.output.LayerNorm.bias
+2020-12-31 17:13:51,904 n: bert.encoder.layer.1.intermediate.dense.weight
+2020-12-31 17:13:51,904 n: bert.encoder.layer.1.intermediate.dense.bias
+2020-12-31 17:13:51,905 n: bert.encoder.layer.1.output.dense.weight
+2020-12-31 17:13:51,905 n: bert.encoder.layer.1.output.dense.bias
+2020-12-31 17:13:51,905 n: bert.encoder.layer.1.output.LayerNorm.weight
+2020-12-31 17:13:51,905 n: bert.encoder.layer.1.output.LayerNorm.bias
+2020-12-31 17:13:51,905 n: bert.encoder.layer.2.attention.self.query.weight
+2020-12-31 17:13:51,905 n: bert.encoder.layer.2.attention.self.query.bias
+2020-12-31 17:13:51,905 n: bert.encoder.layer.2.attention.self.key.weight
+2020-12-31 17:13:51,905 n: bert.encoder.layer.2.attention.self.key.bias
+2020-12-31 17:13:51,905 n: bert.encoder.layer.2.attention.self.value.weight
+2020-12-31 17:13:51,905 n: bert.encoder.layer.2.attention.self.value.bias
+2020-12-31 17:13:51,905 n: bert.encoder.layer.2.attention.output.dense.weight
+2020-12-31 17:13:51,905 n: bert.encoder.layer.2.attention.output.dense.bias
+2020-12-31 17:13:51,905 n: bert.encoder.layer.2.attention.output.LayerNorm.weight
+2020-12-31 17:13:51,905 n: bert.encoder.layer.2.attention.output.LayerNorm.bias
+2020-12-31 17:13:51,905 n: bert.encoder.layer.2.intermediate.dense.weight
+2020-12-31 17:13:51,905 n: bert.encoder.layer.2.intermediate.dense.bias
+2020-12-31 17:13:51,905 n: bert.encoder.layer.2.output.dense.weight
+2020-12-31 17:13:51,905 n: bert.encoder.layer.2.output.dense.bias
+2020-12-31 17:13:51,906 n: bert.encoder.layer.2.output.LayerNorm.weight
+2020-12-31 17:13:51,906 n: bert.encoder.layer.2.output.LayerNorm.bias
+2020-12-31 17:13:51,906 n: bert.encoder.layer.3.attention.self.query.weight
+2020-12-31 17:13:51,906 n: bert.encoder.layer.3.attention.self.query.bias
+2020-12-31 17:13:51,906 n: bert.encoder.layer.3.attention.self.key.weight
+2020-12-31 17:13:51,906 n: bert.encoder.layer.3.attention.self.key.bias
+2020-12-31 17:13:51,906 n: bert.encoder.layer.3.attention.self.value.weight
+2020-12-31 17:13:51,906 n: bert.encoder.layer.3.attention.self.value.bias
+2020-12-31 17:13:51,906 n: bert.encoder.layer.3.attention.output.dense.weight
+2020-12-31 17:13:51,906 n: bert.encoder.layer.3.attention.output.dense.bias
+2020-12-31 17:13:51,906 n: bert.encoder.layer.3.attention.output.LayerNorm.weight
+2020-12-31 17:13:51,906 n: bert.encoder.layer.3.attention.output.LayerNorm.bias
+2020-12-31 17:13:51,906 n: bert.encoder.layer.3.intermediate.dense.weight
+2020-12-31 17:13:51,906 n: bert.encoder.layer.3.intermediate.dense.bias
+2020-12-31 17:13:51,906 n: bert.encoder.layer.3.output.dense.weight
+2020-12-31 17:13:51,906 n: bert.encoder.layer.3.output.dense.bias
+2020-12-31 17:13:51,906 n: bert.encoder.layer.3.output.LayerNorm.weight
+2020-12-31 17:13:51,906 n: bert.encoder.layer.3.output.LayerNorm.bias
+2020-12-31 17:13:51,906 n: bert.pooler.dense.weight
+2020-12-31 17:13:51,907 n: bert.pooler.dense.bias
+2020-12-31 17:13:51,907 n: classifier.weight
+2020-12-31 17:13:51,907 n: classifier.bias
+2020-12-31 17:13:51,907 n: fit_dense.weight
+2020-12-31 17:13:51,907 n: fit_dense.bias
+2020-12-31 17:13:51,907 Total parameters: 14591258
+2020-12-31 17:13:58,802 ***** Running evaluation *****
+2020-12-31 17:13:58,803   Epoch = 0 iter 49 step
+2020-12-31 17:13:58,803   Num examples = 1442
+2020-12-31 17:13:58,803   Batch size = 32
+2020-12-31 17:13:58,803 ***** Eval results *****
+2020-12-31 17:13:58,804   att_loss = 3.2100984174378064
+2020-12-31 17:13:58,804   cls_loss = 0.0
+2020-12-31 17:13:58,804   global_step = 49
+2020-12-31 17:13:58,804   loss = 4.096038589672166
+2020-12-31 17:13:58,804   rep_loss = 0.8859401904806798
+2020-12-31 17:13:58,804 ***** Save model *****
+2020-12-31 17:14:05,872 ***** Running evaluation *****
+2020-12-31 17:14:05,872   Epoch = 0 iter 99 step
+2020-12-31 17:14:05,873   Num examples = 1442
+2020-12-31 17:14:05,873   Batch size = 32
+2020-12-31 17:14:05,873 ***** Eval results *****
+2020-12-31 17:14:05,873   att_loss = 2.712183669359997
+2020-12-31 17:14:05,873   cls_loss = 0.0
+2020-12-31 17:14:05,873   global_step = 99
+2020-12-31 17:14:05,873   loss = 3.519759753737787
+2020-12-31 17:14:05,873   rep_loss = 0.8075760946129308
+2020-12-31 17:14:05,874 ***** Save model *****
+2020-12-31 17:14:12,969 ***** Running evaluation *****
+2020-12-31 17:14:12,970   Epoch = 0 iter 149 step
+2020-12-31 17:14:12,970   Num examples = 1442
+2020-12-31 17:14:12,970   Batch size = 32
+2020-12-31 17:14:12,970 ***** Eval results *****
+2020-12-31 17:14:12,970   att_loss = 2.5046667460627203
+2020-12-31 17:14:12,971   cls_loss = 0.0
+2020-12-31 17:14:12,971   global_step = 149
+2020-12-31 17:14:12,971   loss = 3.2778121080974603
+2020-12-31 17:14:12,971   rep_loss = 0.7731453660350518
+2020-12-31 17:14:12,971 ***** Save model *****
+2020-12-31 17:14:20,119 ***** Running evaluation *****
+2020-12-31 17:14:20,119   Epoch = 0 iter 199 step
+2020-12-31 17:14:20,119   Num examples = 1442
+2020-12-31 17:14:20,119   Batch size = 32
+2020-12-31 17:14:20,120 ***** Eval results *****
+2020-12-31 17:14:20,120   att_loss = 2.371118269973065
+2020-12-31 17:14:20,120   cls_loss = 0.0
+2020-12-31 17:14:20,120   global_step = 199
+2020-12-31 17:14:20,120   loss = 3.123082529959367
+2020-12-31 17:14:20,120   rep_loss = 0.7519642611843856
+2020-12-31 17:14:20,120 ***** Save model *****
+2020-12-31 17:16:32,127 The args: Namespace(aug_train=False, cache_dir='', data_dir='data/trec', data_url='', do_eval=False, do_lower_case=True, eval_batch_size=32, eval_step=50, gradient_accumulation_steps=1, learning_rate=5e-05, max_seq_length=256, no_cuda=False, num_train_epochs=5.0, output_dir='student_output_first_trec', pred_distill=False, seed=42, student_model='data/General_TinyBERT_4L_312D', task_name='mrpc', teacher_model='/root/program/embedding/bert_pretrained_model/tanda_bert_base_asnq_torch', temperature=1.0, train_batch_size=12, warmup_proportion=0.1, weight_decay=0.0001)
+2020-12-31 17:16:32,137 device: cuda n_gpu: 1
+2020-12-31 17:17:31,896 The args: Namespace(aug_train=False, cache_dir='', data_dir='data/trec', data_url='', do_eval=False, do_lower_case=True, eval_batch_size=32, eval_step=50, gradient_accumulation_steps=1, learning_rate=5e-05, max_seq_length=256, no_cuda=False, num_train_epochs=5.0, output_dir='student_output_first_trec', pred_distill=False, seed=42, student_model='data/General_TinyBERT_4L_312D', task_name='mrpc', teacher_model='/root/program/embedding/bert_pretrained_model/tanda_bert_base_asnq_torch', temperature=1.0, train_batch_size=12, warmup_proportion=0.1, weight_decay=0.0001)
+2020-12-31 17:17:31,906 device: cuda n_gpu: 1
+2020-12-31 17:17:32,247 Writing example 0 of 53417
+2020-12-31 17:17:32,248 *** Example ***
+2020-12-31 17:17:32,248 guid: train-0
+2020-12-31 17:17:32,248 tokens: [CLS] who is the author of the book , ` ` the iron lady : a biography of margaret thatcher ' ' ? [SEP] the iron lady ; a biography of margaret thatcher by hugo young - l ##rb - far ##rar , st ##raus & giro ##ux - rr ##b - [SEP]
+2020-12-31 17:17:32,248 input_ids: 101 2040 2003 1996 3166 1997 1996 2338 1010 1036 1036 1996 3707 3203 1024 1037 8308 1997 5545 21127 1005 1005 1029 102 1996 3707 3203 1025 1037 8308 1997 5545 21127 2011 9395 2402 1011 1048 15185 1011 2521 19848 1010 2358 25965 1004 19226 5602 1011 25269 2497 1011 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 17:17:32,248 input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 17:17:32,249 segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 17:17:32,249 label: 1
+2020-12-31 17:17:32,249 label_id: 1
+2020-12-31 17:17:39,876 Writing example 10000 of 53417
+2020-12-31 17:17:46,623 Writing example 20000 of 53417
+2020-12-31 17:17:53,849 Writing example 30000 of 53417
+2020-12-31 17:18:00,422 Writing example 40000 of 53417
+2020-12-31 17:18:07,477 Writing example 50000 of 53417
+2020-12-31 17:18:10,484 Writing example 0 of 1442
+2020-12-31 17:18:10,485 *** Example ***
+2020-12-31 17:18:10,485 guid: dev-0
+2020-12-31 17:18:10,485 tokens: [CLS] what do practitioners of wi ##cca worship ? [SEP] an estimated 50 , 000 americans practice wi ##cca , a form of poly ##the ##istic nature worship . [SEP]
+2020-12-31 17:18:10,485 input_ids: 101 2054 2079 14617 1997 15536 16665 7425 1029 102 2019 4358 2753 1010 2199 4841 3218 15536 16665 1010 1037 2433 1997 26572 10760 6553 3267 7425 1012 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 17:18:10,485 input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 17:18:10,486 segment_ids: 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 17:18:10,486 label: 1
+2020-12-31 17:18:10,486 label_id: 1
+2020-12-31 17:18:11,409 Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pre_trained": "",
+  "training": "",
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+2020-12-31 17:18:14,198 Loading model /root/program/embedding/bert_pretrained_model/tanda_bert_base_asnq_torch/pytorch_model.bin
+2020-12-31 17:18:14,455 loading model...
+2020-12-31 17:18:14,697 done!
+2020-12-31 17:18:14,697 Weights of TinyBertForSequenceClassification not initialized from pretrained model: ['fit_dense.weight', 'fit_dense.bias']
+2020-12-31 17:18:19,424 Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "cell": {},
+  "emb_size": 312,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 312,
+  "initializer_range": 0.02,
+  "intermediate_size": 1200,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 4,
+  "pre_trained": "",
+  "structure": [],
+  "training": "",
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+2020-12-31 17:18:19,821 Loading model data/General_TinyBERT_4L_312D/pytorch_model.bin
+2020-12-31 17:18:19,863 loading model...
+2020-12-31 17:18:19,868 done!
+2020-12-31 17:18:19,868 Weights of TinyBertForSequenceClassification not initialized from pretrained model: ['classifier.weight', 'classifier.bias']
+2020-12-31 17:18:19,868 Weights from pretrained model not used in TinyBertForSequenceClassification: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias']
+2020-12-31 17:18:19,897 ***** Running training *****
+2020-12-31 17:18:19,897   Num examples = 53417
+2020-12-31 17:18:19,898   Batch size = 12
+2020-12-31 17:18:19,898   Num steps = 22255
+2020-12-31 17:18:19,899 n: bert.embeddings.word_embeddings.weight
+2020-12-31 17:18:19,899 n: bert.embeddings.position_embeddings.weight
+2020-12-31 17:18:19,899 n: bert.embeddings.token_type_embeddings.weight
+2020-12-31 17:18:19,899 n: bert.embeddings.LayerNorm.weight
+2020-12-31 17:18:19,899 n: bert.embeddings.LayerNorm.bias
+2020-12-31 17:18:19,899 n: bert.encoder.layer.0.attention.self.query.weight
+2020-12-31 17:18:19,899 n: bert.encoder.layer.0.attention.self.query.bias
+2020-12-31 17:18:19,899 n: bert.encoder.layer.0.attention.self.key.weight
+2020-12-31 17:18:19,899 n: bert.encoder.layer.0.attention.self.key.bias
+2020-12-31 17:18:19,899 n: bert.encoder.layer.0.attention.self.value.weight
+2020-12-31 17:18:19,899 n: bert.encoder.layer.0.attention.self.value.bias
+2020-12-31 17:18:19,899 n: bert.encoder.layer.0.attention.output.dense.weight
+2020-12-31 17:18:19,899 n: bert.encoder.layer.0.attention.output.dense.bias
+2020-12-31 17:18:19,899 n: bert.encoder.layer.0.attention.output.LayerNorm.weight
+2020-12-31 17:18:19,899 n: bert.encoder.layer.0.attention.output.LayerNorm.bias
+2020-12-31 17:18:19,900 n: bert.encoder.layer.0.intermediate.dense.weight
+2020-12-31 17:18:19,900 n: bert.encoder.layer.0.intermediate.dense.bias
+2020-12-31 17:18:19,900 n: bert.encoder.layer.0.output.dense.weight
+2020-12-31 17:18:19,900 n: bert.encoder.layer.0.output.dense.bias
+2020-12-31 17:18:19,900 n: bert.encoder.layer.0.output.LayerNorm.weight
+2020-12-31 17:18:19,900 n: bert.encoder.layer.0.output.LayerNorm.bias
+2020-12-31 17:18:19,900 n: bert.encoder.layer.1.attention.self.query.weight
+2020-12-31 17:18:19,900 n: bert.encoder.layer.1.attention.self.query.bias
+2020-12-31 17:18:19,900 n: bert.encoder.layer.1.attention.self.key.weight
+2020-12-31 17:18:19,900 n: bert.encoder.layer.1.attention.self.key.bias
+2020-12-31 17:18:19,900 n: bert.encoder.layer.1.attention.self.value.weight
+2020-12-31 17:18:19,900 n: bert.encoder.layer.1.attention.self.value.bias
+2020-12-31 17:18:19,900 n: bert.encoder.layer.1.attention.output.dense.weight
+2020-12-31 17:18:19,900 n: bert.encoder.layer.1.attention.output.dense.bias
+2020-12-31 17:18:19,900 n: bert.encoder.layer.1.attention.output.LayerNorm.weight
+2020-12-31 17:18:19,900 n: bert.encoder.layer.1.attention.output.LayerNorm.bias
+2020-12-31 17:18:19,900 n: bert.encoder.layer.1.intermediate.dense.weight
+2020-12-31 17:18:19,900 n: bert.encoder.layer.1.intermediate.dense.bias
+2020-12-31 17:18:19,900 n: bert.encoder.layer.1.output.dense.weight
+2020-12-31 17:18:19,900 n: bert.encoder.layer.1.output.dense.bias
+2020-12-31 17:18:19,901 n: bert.encoder.layer.1.output.LayerNorm.weight
+2020-12-31 17:18:19,901 n: bert.encoder.layer.1.output.LayerNorm.bias
+2020-12-31 17:18:19,901 n: bert.encoder.layer.2.attention.self.query.weight
+2020-12-31 17:18:19,901 n: bert.encoder.layer.2.attention.self.query.bias
+2020-12-31 17:18:19,901 n: bert.encoder.layer.2.attention.self.key.weight
+2020-12-31 17:18:19,901 n: bert.encoder.layer.2.attention.self.key.bias
+2020-12-31 17:18:19,901 n: bert.encoder.layer.2.attention.self.value.weight
+2020-12-31 17:18:19,901 n: bert.encoder.layer.2.attention.self.value.bias
+2020-12-31 17:18:19,901 n: bert.encoder.layer.2.attention.output.dense.weight
+2020-12-31 17:18:19,901 n: bert.encoder.layer.2.attention.output.dense.bias
+2020-12-31 17:18:19,901 n: bert.encoder.layer.2.attention.output.LayerNorm.weight
+2020-12-31 17:18:19,901 n: bert.encoder.layer.2.attention.output.LayerNorm.bias
+2020-12-31 17:18:19,901 n: bert.encoder.layer.2.intermediate.dense.weight
+2020-12-31 17:18:19,901 n: bert.encoder.layer.2.intermediate.dense.bias
+2020-12-31 17:18:19,901 n: bert.encoder.layer.2.output.dense.weight
+2020-12-31 17:18:19,901 n: bert.encoder.layer.2.output.dense.bias
+2020-12-31 17:18:19,901 n: bert.encoder.layer.2.output.LayerNorm.weight
+2020-12-31 17:18:19,901 n: bert.encoder.layer.2.output.LayerNorm.bias
+2020-12-31 17:18:19,901 n: bert.encoder.layer.3.attention.self.query.weight
+2020-12-31 17:18:19,902 n: bert.encoder.layer.3.attention.self.query.bias
+2020-12-31 17:18:19,902 n: bert.encoder.layer.3.attention.self.key.weight
+2020-12-31 17:18:19,902 n: bert.encoder.layer.3.attention.self.key.bias
+2020-12-31 17:18:19,902 n: bert.encoder.layer.3.attention.self.value.weight
+2020-12-31 17:18:19,902 n: bert.encoder.layer.3.attention.self.value.bias
+2020-12-31 17:18:19,902 n: bert.encoder.layer.3.attention.output.dense.weight
+2020-12-31 17:18:19,902 n: bert.encoder.layer.3.attention.output.dense.bias
+2020-12-31 17:18:19,902 n: bert.encoder.layer.3.attention.output.LayerNorm.weight
+2020-12-31 17:18:19,902 n: bert.encoder.layer.3.attention.output.LayerNorm.bias
+2020-12-31 17:18:19,902 n: bert.encoder.layer.3.intermediate.dense.weight
+2020-12-31 17:18:19,902 n: bert.encoder.layer.3.intermediate.dense.bias
+2020-12-31 17:18:19,902 n: bert.encoder.layer.3.output.dense.weight
+2020-12-31 17:18:19,902 n: bert.encoder.layer.3.output.dense.bias
+2020-12-31 17:18:19,902 n: bert.encoder.layer.3.output.LayerNorm.weight
+2020-12-31 17:18:19,902 n: bert.encoder.layer.3.output.LayerNorm.bias
+2020-12-31 17:18:19,902 n: bert.pooler.dense.weight
+2020-12-31 17:18:19,902 n: bert.pooler.dense.bias
+2020-12-31 17:18:19,902 n: classifier.weight
+2020-12-31 17:18:19,902 n: classifier.bias
+2020-12-31 17:18:19,903 n: fit_dense.weight
+2020-12-31 17:18:19,903 n: fit_dense.bias
+2020-12-31 17:18:19,903 Total parameters: 14591258
+2020-12-31 17:18:26,764 ***** Running evaluation *****
+2020-12-31 17:18:26,765   Epoch = 0 iter 49 step
+2020-12-31 17:18:26,765   Num examples = 1442
+2020-12-31 17:18:26,765   Batch size = 32
+2020-12-31 17:18:26,765 ***** Eval results *****
+2020-12-31 17:18:26,766   att_loss = 3.2100984174378064
+2020-12-31 17:18:26,766   cls_loss = 0.0
+2020-12-31 17:18:26,766   global_step = 49
+2020-12-31 17:18:26,766   loss = 4.096038589672166
+2020-12-31 17:18:26,766   rep_loss = 0.8859401904806798
+2020-12-31 17:18:26,766 ***** Save model *****
+2020-12-31 17:32:13,462 The args: Namespace(aug_train=False, cache_dir='', data_dir='data/trec', data_url='', do_eval=False, do_lower_case=True, eval_batch_size=32, eval_step=50, gradient_accumulation_steps=1, learning_rate=5e-05, max_seq_length=256, no_cuda=False, num_train_epochs=5.0, output_dir='student_output_first_trec', pred_distill=False, seed=42, student_model='data/General_TinyBERT_4L_312D', task_name='mrpc', teacher_model='/root/program/embedding/bert_pretrained_model/tanda_bert_base_asnq_torch', temperature=1.0, train_batch_size=12, warmup_proportion=0.1, weight_decay=0.0001)
+2020-12-31 17:32:13,471 device: cuda n_gpu: 1
+2020-12-31 17:32:23,234 The args: Namespace(aug_train=False, cache_dir='', data_dir='data/trec', data_url='', do_eval=False, do_lower_case=True, eval_batch_size=32, eval_step=50, gradient_accumulation_steps=1, learning_rate=5e-05, max_seq_length=256, no_cuda=False, num_train_epochs=5.0, output_dir='student_output_first_trec', pred_distill=False, seed=42, student_model='data/General_TinyBERT_4L_312D', task_name='mrpc', teacher_model='/root/program/embedding/bert_pretrained_model/tanda_bert_base_asnq_torch', temperature=1.0, train_batch_size=12, warmup_proportion=0.1, weight_decay=0.0001)
+2020-12-31 17:32:23,243 device: cuda n_gpu: 1
+2020-12-31 17:32:23,591 Writing example 0 of 53417
+2020-12-31 17:32:23,592 *** Example ***
+2020-12-31 17:32:23,592 guid: train-0
+2020-12-31 17:32:23,592 tokens: [CLS] who is the author of the book , ` ` the iron lady : a biography of margaret thatcher ' ' ? [SEP] the iron lady ; a biography of margaret thatcher by hugo young - l ##rb - far ##rar , st ##raus & giro ##ux - rr ##b - [SEP]
+2020-12-31 17:32:23,592 input_ids: 101 2040 2003 1996 3166 1997 1996 2338 1010 1036 1036 1996 3707 3203 1024 1037 8308 1997 5545 21127 1005 1005 1029 102 1996 3707 3203 1025 1037 8308 1997 5545 21127 2011 9395 2402 1011 1048 15185 1011 2521 19848 1010 2358 25965 1004 19226 5602 1011 25269 2497 1011 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 17:32:23,592 input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 17:32:23,593 segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 17:32:23,593 label: 1
+2020-12-31 17:32:23,593 label_id: 1
+2020-12-31 17:32:31,346 Writing example 10000 of 53417
+2020-12-31 17:32:38,210 Writing example 20000 of 53417
+2020-12-31 17:32:45,465 Writing example 30000 of 53417
+2020-12-31 17:32:52,097 Writing example 40000 of 53417
+2020-12-31 17:32:59,232 Writing example 50000 of 53417
+2020-12-31 17:33:02,263 Writing example 0 of 1442
+2020-12-31 17:33:02,263 *** Example ***
+2020-12-31 17:33:02,263 guid: dev-0
+2020-12-31 17:33:02,264 tokens: [CLS] what do practitioners of wi ##cca worship ? [SEP] an estimated 50 , 000 americans practice wi ##cca , a form of poly ##the ##istic nature worship . [SEP]
+2020-12-31 17:33:02,264 input_ids: 101 2054 2079 14617 1997 15536 16665 7425 1029 102 2019 4358 2753 1010 2199 4841 3218 15536 16665 1010 1037 2433 1997 26572 10760 6553 3267 7425 1012 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 17:33:02,264 input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 17:33:02,264 segment_ids: 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2020-12-31 17:33:02,264 label: 1
+2020-12-31 17:33:02,264 label_id: 1
+2020-12-31 17:33:03,205 Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pre_trained": "",
+  "training": "",
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+2020-12-31 17:33:05,987 Loading model /root/program/embedding/bert_pretrained_model/tanda_bert_base_asnq_torch/pytorch_model.bin
+2020-12-31 17:33:06,244 loading model...
+2020-12-31 17:33:06,487 done!
+2020-12-31 17:33:06,487 Weights of TinyBertForSequenceClassification not initialized from pretrained model: ['fit_dense.weight', 'fit_dense.bias']
+2020-12-31 17:33:11,219 Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "cell": {},
+  "emb_size": 312,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 312,
+  "initializer_range": 0.02,
+  "intermediate_size": 1200,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 4,
+  "pre_trained": "",
+  "structure": [],
+  "training": "",
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+2020-12-31 17:33:11,615 Loading model data/General_TinyBERT_4L_312D/pytorch_model.bin
+2020-12-31 17:33:11,657 loading model...
+2020-12-31 17:33:11,662 done!
+2020-12-31 17:33:11,662 Weights of TinyBertForSequenceClassification not initialized from pretrained model: ['classifier.weight', 'classifier.bias']
+2020-12-31 17:33:11,662 Weights from pretrained model not used in TinyBertForSequenceClassification: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias']
+2020-12-31 17:33:11,691 ***** Running training *****
+2020-12-31 17:33:11,691   Num examples = 53417
+2020-12-31 17:33:11,692   Batch size = 12
+2020-12-31 17:33:11,692   Num steps = 22255
+2020-12-31 17:33:11,693 n: bert.embeddings.word_embeddings.weight
+2020-12-31 17:33:11,693 n: bert.embeddings.position_embeddings.weight
+2020-12-31 17:33:11,693 n: bert.embeddings.token_type_embeddings.weight
+2020-12-31 17:33:11,693 n: bert.embeddings.LayerNorm.weight
+2020-12-31 17:33:11,693 n: bert.embeddings.LayerNorm.bias
+2020-12-31 17:33:11,693 n: bert.encoder.layer.0.attention.self.query.weight
+2020-12-31 17:33:11,693 n: bert.encoder.layer.0.attention.self.query.bias
+2020-12-31 17:33:11,693 n: bert.encoder.layer.0.attention.self.key.weight
+2020-12-31 17:33:11,693 n: bert.encoder.layer.0.attention.self.key.bias
+2020-12-31 17:33:11,693 n: bert.encoder.layer.0.attention.self.value.weight
+2020-12-31 17:33:11,693 n: bert.encoder.layer.0.attention.self.value.bias
+2020-12-31 17:33:11,694 n: bert.encoder.layer.0.attention.output.dense.weight
+2020-12-31 17:33:11,694 n: bert.encoder.layer.0.attention.output.dense.bias
+2020-12-31 17:33:11,694 n: bert.encoder.layer.0.attention.output.LayerNorm.weight
+2020-12-31 17:33:11,694 n: bert.encoder.layer.0.attention.output.LayerNorm.bias
+2020-12-31 17:33:11,694 n: bert.encoder.layer.0.intermediate.dense.weight
+2020-12-31 17:33:11,694 n: bert.encoder.layer.0.intermediate.dense.bias
+2020-12-31 17:33:11,694 n: bert.encoder.layer.0.output.dense.weight
+2020-12-31 17:33:11,694 n: bert.encoder.layer.0.output.dense.bias
+2020-12-31 17:33:11,694 n: bert.encoder.layer.0.output.LayerNorm.weight
+2020-12-31 17:33:11,694 n: bert.encoder.layer.0.output.LayerNorm.bias
+2020-12-31 17:33:11,694 n: bert.encoder.layer.1.attention.self.query.weight
+2020-12-31 17:33:11,694 n: bert.encoder.layer.1.attention.self.query.bias
+2020-12-31 17:33:11,694 n: bert.encoder.layer.1.attention.self.key.weight
+2020-12-31 17:33:11,694 n: bert.encoder.layer.1.attention.self.key.bias
+2020-12-31 17:33:11,694 n: bert.encoder.layer.1.attention.self.value.weight
+2020-12-31 17:33:11,694 n: bert.encoder.layer.1.attention.self.value.bias
+2020-12-31 17:33:11,694 n: bert.encoder.layer.1.attention.output.dense.weight
+2020-12-31 17:33:11,694 n: bert.encoder.layer.1.attention.output.dense.bias
+2020-12-31 17:33:11,695 n: bert.encoder.layer.1.attention.output.LayerNorm.weight
+2020-12-31 17:33:11,695 n: bert.encoder.layer.1.attention.output.LayerNorm.bias
+2020-12-31 17:33:11,695 n: bert.encoder.layer.1.intermediate.dense.weight
+2020-12-31 17:33:11,695 n: bert.encoder.layer.1.intermediate.dense.bias
+2020-12-31 17:33:11,695 n: bert.encoder.layer.1.output.dense.weight
+2020-12-31 17:33:11,695 n: bert.encoder.layer.1.output.dense.bias
+2020-12-31 17:33:11,695 n: bert.encoder.layer.1.output.LayerNorm.weight
+2020-12-31 17:33:11,695 n: bert.encoder.layer.1.output.LayerNorm.bias
+2020-12-31 17:33:11,695 n: bert.encoder.layer.2.attention.self.query.weight
+2020-12-31 17:33:11,695 n: bert.encoder.layer.2.attention.self.query.bias
+2020-12-31 17:33:11,695 n: bert.encoder.layer.2.attention.self.key.weight
+2020-12-31 17:33:11,695 n: bert.encoder.layer.2.attention.self.key.bias
+2020-12-31 17:33:11,695 n: bert.encoder.layer.2.attention.self.value.weight
+2020-12-31 17:33:11,695 n: bert.encoder.layer.2.attention.self.value.bias
+2020-12-31 17:33:11,695 n: bert.encoder.layer.2.attention.output.dense.weight
+2020-12-31 17:33:11,695 n: bert.encoder.layer.2.attention.output.dense.bias
+2020-12-31 17:33:11,695 n: bert.encoder.layer.2.attention.output.LayerNorm.weight
+2020-12-31 17:33:11,695 n: bert.encoder.layer.2.attention.output.LayerNorm.bias
+2020-12-31 17:33:11,695 n: bert.encoder.layer.2.intermediate.dense.weight
+2020-12-31 17:33:11,695 n: bert.encoder.layer.2.intermediate.dense.bias
+2020-12-31 17:33:11,696 n: bert.encoder.layer.2.output.dense.weight
+2020-12-31 17:33:11,696 n: bert.encoder.layer.2.output.dense.bias
+2020-12-31 17:33:11,696 n: bert.encoder.layer.2.output.LayerNorm.weight
+2020-12-31 17:33:11,696 n: bert.encoder.layer.2.output.LayerNorm.bias
+2020-12-31 17:33:11,696 n: bert.encoder.layer.3.attention.self.query.weight
+2020-12-31 17:33:11,696 n: bert.encoder.layer.3.attention.self.query.bias
+2020-12-31 17:33:11,696 n: bert.encoder.layer.3.attention.self.key.weight
+2020-12-31 17:33:11,696 n: bert.encoder.layer.3.attention.self.key.bias
+2020-12-31 17:33:11,696 n: bert.encoder.layer.3.attention.self.value.weight
+2020-12-31 17:33:11,696 n: bert.encoder.layer.3.attention.self.value.bias
+2020-12-31 17:33:11,696 n: bert.encoder.layer.3.attention.output.dense.weight
+2020-12-31 17:33:11,696 n: bert.encoder.layer.3.attention.output.dense.bias
+2020-12-31 17:33:11,696 n: bert.encoder.layer.3.attention.output.LayerNorm.weight
+2020-12-31 17:33:11,696 n: bert.encoder.layer.3.attention.output.LayerNorm.bias
+2020-12-31 17:33:11,696 n: bert.encoder.layer.3.intermediate.dense.weight
+2020-12-31 17:33:11,696 n: bert.encoder.layer.3.intermediate.dense.bias
+2020-12-31 17:33:11,696 n: bert.encoder.layer.3.output.dense.weight
+2020-12-31 17:33:11,696 n: bert.encoder.layer.3.output.dense.bias
+2020-12-31 17:33:11,696 n: bert.encoder.layer.3.output.LayerNorm.weight
+2020-12-31 17:33:11,696 n: bert.encoder.layer.3.output.LayerNorm.bias
+2020-12-31 17:33:11,697 n: bert.pooler.dense.weight
+2020-12-31 17:33:11,697 n: bert.pooler.dense.bias
+2020-12-31 17:33:11,697 n: classifier.weight
+2020-12-31 17:33:11,697 n: classifier.bias
+2020-12-31 17:33:11,697 n: fit_dense.weight
+2020-12-31 17:33:11,697 n: fit_dense.bias
+2020-12-31 17:33:11,697 Total parameters: 14591258
+2020-12-31 17:33:18,588 ***** Running evaluation *****
+2020-12-31 17:33:18,588   Epoch = 0 iter 49 step
+2020-12-31 17:33:18,589   Num examples = 1442
+2020-12-31 17:33:18,589   Batch size = 32
+2020-12-31 17:33:18,589 ***** Eval results *****
+2020-12-31 17:33:18,589   att_loss = 3.2100984174378064
+2020-12-31 17:33:18,589   cls_loss = 0.0
+2020-12-31 17:33:18,590   global_step = 49
+2020-12-31 17:33:18,590   loss = 4.096038589672166
+2020-12-31 17:33:18,590   rep_loss = 0.8859401904806798
+2020-12-31 17:33:18,590 ***** Save model *****
+2020-12-31 17:33:25,661 ***** Running evaluation *****
+2020-12-31 17:33:25,661   Epoch = 0 iter 99 step
+2020-12-31 17:33:25,661   Num examples = 1442
+2020-12-31 17:33:25,661   Batch size = 32
+2020-12-31 17:33:25,662 ***** Eval results *****
+2020-12-31 17:33:25,662   att_loss = 2.712183669359997
+2020-12-31 17:33:25,662   cls_loss = 0.0
+2020-12-31 17:33:25,662   global_step = 99
+2020-12-31 17:33:25,662   loss = 3.519759753737787
+2020-12-31 17:33:25,662   rep_loss = 0.8075760946129308
+2020-12-31 17:33:25,662 ***** Save model *****
+2020-12-31 17:33:32,760 ***** Running evaluation *****
+2020-12-31 17:33:32,760   Epoch = 0 iter 149 step
+2020-12-31 17:33:32,760   Num examples = 1442
+2020-12-31 17:33:32,760   Batch size = 32
+2020-12-31 17:33:32,761 ***** Eval results *****
+2020-12-31 17:33:32,761   att_loss = 2.5046667460627203
+2020-12-31 17:33:32,761   cls_loss = 0.0
+2020-12-31 17:33:32,761   global_step = 149
+2020-12-31 17:33:32,761   loss = 3.2778121080974603
+2020-12-31 17:33:32,761   rep_loss = 0.7731453660350518
+2020-12-31 17:33:32,761 ***** Save model *****
+2020-12-31 17:33:39,903 ***** Running evaluation *****
+2020-12-31 17:33:39,904   Epoch = 0 iter 199 step
+2020-12-31 17:33:39,904   Num examples = 1442
+2020-12-31 17:33:39,904   Batch size = 32
+2020-12-31 17:33:39,904 ***** Eval results *****
+2020-12-31 17:33:39,904   att_loss = 2.371118269973065
+2020-12-31 17:33:39,904   cls_loss = 0.0
+2020-12-31 17:33:39,905   global_step = 199
+2020-12-31 17:33:39,905   loss = 3.123082529959367
+2020-12-31 17:33:39,905   rep_loss = 0.7519642611843856
+2020-12-31 17:33:39,905 ***** Save model *****
+2020-12-31 17:33:47,031 ***** Running evaluation *****
+2020-12-31 17:33:47,031   Epoch = 0 iter 249 step
+2020-12-31 17:33:47,031   Num examples = 1442
+2020-12-31 17:33:47,031   Batch size = 32
+2020-12-31 17:33:47,032 ***** Eval results *****
+2020-12-31 17:33:47,032   att_loss = 2.2960171393122537
+2020-12-31 17:33:47,032   cls_loss = 0.0
+2020-12-31 17:33:47,032   global_step = 249
+2020-12-31 17:33:47,032   loss = 3.034283726569639
+2020-12-31 17:33:47,032   rep_loss = 0.738266589172394
+2020-12-31 17:33:47,032 ***** Save model *****
+2021-01-25 19:53:58,363 The args: Namespace(aug_train=False, cache_dir='', data_dir='data/trec', data_url='', do_eval=False, do_lower_case=True, eval_batch_size=32, eval_step=50, gradient_accumulation_steps=1, learning_rate=5e-05, max_seq_length=256, no_cuda=False, num_train_epochs=5.0, output_dir='student_output_first_trec', pred_distill=False, seed=42, student_model='data/General_TinyBERT_4L_312D', task_name='mrpc', teacher_model='/root/program/embedding/bert_pretrained_model/tanda_bert_base_asnq_torch', temperature=1.0, train_batch_size=12, warmup_proportion=0.1, weight_decay=0.0001)
+2021-01-25 19:53:58,373 device: cuda n_gpu: 1
+2021-01-25 19:58:49,295 The args: Namespace(aug_train=False, cache_dir='', data_dir='data/trec', data_url='', do_eval=False, do_lower_case=True, eval_batch_size=32, eval_step=50, gradient_accumulation_steps=1, learning_rate=5e-05, max_seq_length=256, no_cuda=False, num_train_epochs=5.0, output_dir='student_output_first_trec', pred_distill=False, seed=42, student_model='data/General_TinyBERT_4L_312D', task_name='mrpc', teacher_model='/root/program/embedding/bert_pretrained_model/tanda_bert_base_asnq_torch', temperature=1.0, train_batch_size=12, warmup_proportion=0.1, weight_decay=0.0001)
+2021-01-25 19:58:49,304 device: cuda n_gpu: 1
+2021-01-25 19:59:06,645 The args: Namespace(aug_train=False, cache_dir='', data_dir='data/trec', data_url='', do_eval=False, do_lower_case=True, eval_batch_size=32, eval_step=50, gradient_accumulation_steps=1, learning_rate=5e-05, max_seq_length=256, no_cuda=False, num_train_epochs=5.0, output_dir='student_output_first_trec', pred_distill=False, seed=42, student_model='data/General_TinyBERT_4L_312D', task_name='mrpc', teacher_model='/root/program/embedding/bert_pretrained_model/tanda_bert_base_asnq_torch', temperature=1.0, train_batch_size=12, warmup_proportion=0.1, weight_decay=0.0001)
+2021-01-25 19:59:06,656 device: cuda n_gpu: 1
+2021-01-25 19:59:06,980 Writing example 0 of 53417
+2021-01-25 19:59:06,981 *** Example ***
+2021-01-25 19:59:06,981 guid: train-0
+2021-01-25 19:59:06,981 tokens: [CLS] who is the author of the book , ` ` the iron lady : a biography of margaret thatcher ' ' ? [SEP] the iron lady ; a biography of margaret thatcher by hugo young - l ##rb - far ##rar , st ##raus & giro ##ux - rr ##b - [SEP]
+2021-01-25 19:59:06,981 input_ids: 101 2040 2003 1996 3166 1997 1996 2338 1010 1036 1036 1996 3707 3203 1024 1037 8308 1997 5545 21127 1005 1005 1029 102 1996 3707 3203 1025 1037 8308 1997 5545 21127 2011 9395 2402 1011 1048 15185 1011 2521 19848 1010 2358 25965 1004 19226 5602 1011 25269 2497 1011 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2021-01-25 19:59:06,981 input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2021-01-25 19:59:06,981 segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2021-01-25 19:59:06,981 label: 1
+2021-01-25 19:59:06,981 label_id: 1
+2021-01-25 19:59:14,603 Writing example 10000 of 53417
+2021-01-25 19:59:21,364 Writing example 20000 of 53417
+2021-01-25 19:59:28,489 Writing example 30000 of 53417
+2021-01-25 19:59:35,055 Writing example 40000 of 53417
+2021-01-25 19:59:42,089 Writing example 50000 of 53417
+2021-01-25 19:59:45,092 Writing example 0 of 1442
+2021-01-25 19:59:45,093 *** Example ***
+2021-01-25 19:59:45,093 guid: dev-0
+2021-01-25 19:59:45,093 tokens: [CLS] what do practitioners of wi ##cca worship ? [SEP] an estimated 50 , 000 americans practice wi ##cca , a form of poly ##the ##istic nature worship . [SEP]
+2021-01-25 19:59:45,093 input_ids: 101 2054 2079 14617 1997 15536 16665 7425 1029 102 2019 4358 2753 1010 2199 4841 3218 15536 16665 1010 1037 2433 1997 26572 10760 6553 3267 7425 1012 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2021-01-25 19:59:45,093 input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2021-01-25 19:59:45,093 segment_ids: 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2021-01-25 19:59:45,093 label: 1
+2021-01-25 19:59:45,094 label_id: 1
+2021-01-25 19:59:46,020 Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pre_trained": "",
+  "training": "",
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+2021-01-25 19:59:48,853 Loading model /root/program/embedding/bert_pretrained_model/tanda_bert_base_asnq_torch/pytorch_model.bin
+2021-01-25 19:59:49,201 loading model...
+2021-01-25 19:59:49,436 done!
+2021-01-25 19:59:49,437 Weights of TinyBertForSequenceClassification not initialized from pretrained model: ['fit_dense.weight', 'fit_dense.bias']
+2021-01-25 19:59:54,641 Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "cell": {},
+  "emb_size": 312,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 312,
+  "initializer_range": 0.02,
+  "intermediate_size": 1200,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 4,
+  "pre_trained": "",
+  "structure": [],
+  "training": "",
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+2021-01-25 19:59:55,051 Loading model data/General_TinyBERT_4L_312D/pytorch_model.bin
+2021-01-25 19:59:55,129 loading model...
+2021-01-25 19:59:55,163 done!
+2021-01-25 19:59:55,163 Weights of TinyBertForSequenceClassification not initialized from pretrained model: ['classifier.weight', 'classifier.bias']
+2021-01-25 19:59:55,163 Weights from pretrained model not used in TinyBertForSequenceClassification: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias']
+2021-01-25 19:59:55,193 ***** Running training *****
+2021-01-25 19:59:55,193   Num examples = 53417
+2021-01-25 19:59:55,194   Batch size = 12
+2021-01-25 19:59:55,194   Num steps = 22255
+2021-01-25 19:59:55,195 n: bert.embeddings.word_embeddings.weight
+2021-01-25 19:59:55,195 n: bert.embeddings.position_embeddings.weight
+2021-01-25 19:59:55,195 n: bert.embeddings.token_type_embeddings.weight
+2021-01-25 19:59:55,195 n: bert.embeddings.LayerNorm.weight
+2021-01-25 19:59:55,195 n: bert.embeddings.LayerNorm.bias
+2021-01-25 19:59:55,195 n: bert.encoder.layer.0.attention.self.query.weight
+2021-01-25 19:59:55,195 n: bert.encoder.layer.0.attention.self.query.bias
+2021-01-25 19:59:55,195 n: bert.encoder.layer.0.attention.self.key.weight
+2021-01-25 19:59:55,195 n: bert.encoder.layer.0.attention.self.key.bias
+2021-01-25 19:59:55,195 n: bert.encoder.layer.0.attention.self.value.weight
+2021-01-25 19:59:55,195 n: bert.encoder.layer.0.attention.self.value.bias
+2021-01-25 19:59:55,195 n: bert.encoder.layer.0.attention.output.dense.weight
+2021-01-25 19:59:55,196 n: bert.encoder.layer.0.attention.output.dense.bias
+2021-01-25 19:59:55,196 n: bert.encoder.layer.0.attention.output.LayerNorm.weight
+2021-01-25 19:59:55,196 n: bert.encoder.layer.0.attention.output.LayerNorm.bias
+2021-01-25 19:59:55,196 n: bert.encoder.layer.0.intermediate.dense.weight
+2021-01-25 19:59:55,196 n: bert.encoder.layer.0.intermediate.dense.bias
+2021-01-25 19:59:55,196 n: bert.encoder.layer.0.output.dense.weight
+2021-01-25 19:59:55,196 n: bert.encoder.layer.0.output.dense.bias
+2021-01-25 19:59:55,196 n: bert.encoder.layer.0.output.LayerNorm.weight
+2021-01-25 19:59:55,196 n: bert.encoder.layer.0.output.LayerNorm.bias
+2021-01-25 19:59:55,196 n: bert.encoder.layer.1.attention.self.query.weight
+2021-01-25 19:59:55,196 n: bert.encoder.layer.1.attention.self.query.bias
+2021-01-25 19:59:55,196 n: bert.encoder.layer.1.attention.self.key.weight
+2021-01-25 19:59:55,196 n: bert.encoder.layer.1.attention.self.key.bias
+2021-01-25 19:59:55,196 n: bert.encoder.layer.1.attention.self.value.weight
+2021-01-25 19:59:55,196 n: bert.encoder.layer.1.attention.self.value.bias
+2021-01-25 19:59:55,196 n: bert.encoder.layer.1.attention.output.dense.weight
+2021-01-25 19:59:55,196 n: bert.encoder.layer.1.attention.output.dense.bias
+2021-01-25 19:59:55,196 n: bert.encoder.layer.1.attention.output.LayerNorm.weight
+2021-01-25 19:59:55,196 n: bert.encoder.layer.1.attention.output.LayerNorm.bias
+2021-01-25 19:59:55,197 n: bert.encoder.layer.1.intermediate.dense.weight
+2021-01-25 19:59:55,197 n: bert.encoder.layer.1.intermediate.dense.bias
+2021-01-25 19:59:55,197 n: bert.encoder.layer.1.output.dense.weight
+2021-01-25 19:59:55,197 n: bert.encoder.layer.1.output.dense.bias
+2021-01-25 19:59:55,197 n: bert.encoder.layer.1.output.LayerNorm.weight
+2021-01-25 19:59:55,197 n: bert.encoder.layer.1.output.LayerNorm.bias
+2021-01-25 19:59:55,197 n: bert.encoder.layer.2.attention.self.query.weight
+2021-01-25 19:59:55,197 n: bert.encoder.layer.2.attention.self.query.bias
+2021-01-25 19:59:55,197 n: bert.encoder.layer.2.attention.self.key.weight
+2021-01-25 19:59:55,197 n: bert.encoder.layer.2.attention.self.key.bias
+2021-01-25 19:59:55,197 n: bert.encoder.layer.2.attention.self.value.weight
+2021-01-25 19:59:55,197 n: bert.encoder.layer.2.attention.self.value.bias
+2021-01-25 19:59:55,197 n: bert.encoder.layer.2.attention.output.dense.weight
+2021-01-25 19:59:55,197 n: bert.encoder.layer.2.attention.output.dense.bias
+2021-01-25 19:59:55,197 n: bert.encoder.layer.2.attention.output.LayerNorm.weight
+2021-01-25 19:59:55,197 n: bert.encoder.layer.2.attention.output.LayerNorm.bias
+2021-01-25 19:59:55,197 n: bert.encoder.layer.2.intermediate.dense.weight
+2021-01-25 19:59:55,197 n: bert.encoder.layer.2.intermediate.dense.bias
+2021-01-25 19:59:55,197 n: bert.encoder.layer.2.output.dense.weight
+2021-01-25 19:59:55,198 n: bert.encoder.layer.2.output.dense.bias
+2021-01-25 19:59:55,198 n: bert.encoder.layer.2.output.LayerNorm.weight
+2021-01-25 19:59:55,198 n: bert.encoder.layer.2.output.LayerNorm.bias
+2021-01-25 19:59:55,198 n: bert.encoder.layer.3.attention.self.query.weight
+2021-01-25 19:59:55,198 n: bert.encoder.layer.3.attention.self.query.bias
+2021-01-25 19:59:55,198 n: bert.encoder.layer.3.attention.self.key.weight
+2021-01-25 19:59:55,198 n: bert.encoder.layer.3.attention.self.key.bias
+2021-01-25 19:59:55,198 n: bert.encoder.layer.3.attention.self.value.weight
+2021-01-25 19:59:55,198 n: bert.encoder.layer.3.attention.self.value.bias
+2021-01-25 19:59:55,198 n: bert.encoder.layer.3.attention.output.dense.weight
+2021-01-25 19:59:55,198 n: bert.encoder.layer.3.attention.output.dense.bias
+2021-01-25 19:59:55,198 n: bert.encoder.layer.3.attention.output.LayerNorm.weight
+2021-01-25 19:59:55,198 n: bert.encoder.layer.3.attention.output.LayerNorm.bias
+2021-01-25 19:59:55,198 n: bert.encoder.layer.3.intermediate.dense.weight
+2021-01-25 19:59:55,198 n: bert.encoder.layer.3.intermediate.dense.bias
+2021-01-25 19:59:55,198 n: bert.encoder.layer.3.output.dense.weight
+2021-01-25 19:59:55,198 n: bert.encoder.layer.3.output.dense.bias
+2021-01-25 19:59:55,198 n: bert.encoder.layer.3.output.LayerNorm.weight
+2021-01-25 19:59:55,198 n: bert.encoder.layer.3.output.LayerNorm.bias
+2021-01-25 19:59:55,198 n: bert.pooler.dense.weight
+2021-01-25 19:59:55,199 n: bert.pooler.dense.bias
+2021-01-25 19:59:55,199 n: classifier.weight
+2021-01-25 19:59:55,199 n: classifier.bias
+2021-01-25 19:59:55,199 n: fit_dense.weight
+2021-01-25 19:59:55,199 n: fit_dense.bias
+2021-01-25 19:59:55,199 Total parameters: 14591258
+2021-01-25 20:00:02,004 ***** Running evaluation *****
+2021-01-25 20:00:02,004   Epoch = 0 iter 49 step
+2021-01-25 20:00:02,004   Num examples = 1442
+2021-01-25 20:00:02,005   Batch size = 32
+2021-01-25 20:00:02,005 ***** Eval results *****
+2021-01-25 20:00:02,005   att_loss = 3.2100984174378064
+2021-01-25 20:00:02,005   cls_loss = 0.0
+2021-01-25 20:00:02,005   global_step = 49
+2021-01-25 20:00:02,005   loss = 4.096038589672166
+2021-01-25 20:00:02,005   rep_loss = 0.8859401904806798
+2021-01-25 20:00:02,006 ***** Save model *****
+2021-01-25 20:00:09,018 ***** Running evaluation *****
+2021-01-25 20:00:09,018   Epoch = 0 iter 99 step
+2021-01-25 20:00:09,018   Num examples = 1442
+2021-01-25 20:00:09,018   Batch size = 32
+2021-01-25 20:00:09,019 ***** Eval results *****
+2021-01-25 20:00:09,019   att_loss = 2.712183669359997
+2021-01-25 20:00:09,019   cls_loss = 0.0
+2021-01-25 20:00:09,019   global_step = 99
+2021-01-25 20:00:09,019   loss = 3.519759753737787
+2021-01-25 20:00:09,019   rep_loss = 0.8075760946129308
+2021-01-25 20:00:09,019 ***** Save model *****
+2021-01-26 17:09:14,611 The args: Namespace(aug_train=False, cache_dir='', data_dir='data/trec', data_url='', do_eval=False, do_lower_case=True, eval_batch_size=32, eval_step=50, gradient_accumulation_steps=1, learning_rate=5e-05, max_seq_length=256, no_cuda=False, num_train_epochs=5.0, output_dir='student_output_first_trec', pred_distill=False, seed=42, student_model='/data/ceph/zhansu/embedding/General_TinyBERT_4L_312D', task_name='mrpc', teacher_model='/data/ceph/zhansu/embedding/tanda_bert_base_asnq_torch', temperature=1.0, train_batch_size=12, warmup_proportion=0.1, weight_decay=0.0001)
+2021-01-26 17:09:14,868 device: cuda n_gpu: 1
+2021-01-26 17:09:15,509 Writing example 0 of 53417
+2021-01-26 17:09:15,511 *** Example ***
+2021-01-26 17:09:15,511 guid: train-0
+2021-01-26 17:09:15,511 tokens: [CLS] who is the author of the book , ` ` the iron lady : a biography of margaret thatcher ' ' ? [SEP] the iron lady ; a biography of margaret thatcher by hugo young - l ##rb - far ##rar , st ##raus & giro ##ux - rr ##b - [SEP]
+2021-01-26 17:09:15,511 input_ids: 101 2040 2003 1996 3166 1997 1996 2338 1010 1036 1036 1996 3707 3203 1024 1037 8308 1997 5545 21127 1005 1005 1029 102 1996 3707 3203 1025 1037 8308 1997 5545 21127 2011 9395 2402 1011 1048 15185 1011 2521 19848 1010 2358 25965 1004 19226 5602 1011 25269 2497 1011 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2021-01-26 17:09:15,512 input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2021-01-26 17:09:15,512 segment_ids: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2021-01-26 17:09:15,512 label: 1
+2021-01-26 17:09:15,513 label_id: 1
+2021-01-26 17:09:23,904 Writing example 10000 of 53417
+2021-01-26 17:09:31,513 Writing example 20000 of 53417
+2021-01-26 17:09:39,236 Writing example 30000 of 53417
+2021-01-26 17:09:46,767 Writing example 40000 of 53417
+2021-01-26 17:09:54,265 Writing example 50000 of 53417
+2021-01-26 17:09:57,894 Writing example 0 of 1442
+2021-01-26 17:09:57,895 *** Example ***
+2021-01-26 17:09:57,895 guid: dev-0
+2021-01-26 17:09:57,895 tokens: [CLS] what do practitioners of wi ##cca worship ? [SEP] an estimated 50 , 000 americans practice wi ##cca , a form of poly ##the ##istic nature worship . [SEP]
+2021-01-26 17:09:57,895 input_ids: 101 2054 2079 14617 1997 15536 16665 7425 1029 102 2019 4358 2753 1010 2199 4841 3218 15536 16665 1010 1037 2433 1997 26572 10760 6553 3267 7425 1012 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2021-01-26 17:09:57,896 input_mask: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2021-01-26 17:09:57,896 segment_ids: 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+2021-01-26 17:09:57,896 label: 1
+2021-01-26 17:09:57,896 label_id: 1
+2021-01-26 17:09:58,974 Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pre_trained": "",
+  "training": "",
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+2021-01-26 17:10:02,145 Loading model /data/ceph/zhansu/embedding/tanda_bert_base_asnq_torch/pytorch_model.bin
+2021-01-26 17:10:05,671 loading model...
+2021-01-26 17:10:06,229 done!
+2021-01-26 17:10:06,229 Weights of TinyBertForSequenceClassification not initialized from pretrained model: ['fit_dense.weight', 'fit_dense.bias']
+2021-01-26 17:10:08,380 Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "cell": {},
+  "emb_size": 312,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 312,
+  "initializer_range": 0.02,
+  "intermediate_size": 1200,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 4,
+  "pre_trained": "",
+  "structure": [],
+  "training": "",
+  "type_vocab_size": 2,
+  "vocab_size": 30522
+}
+
+2021-01-26 17:10:08,824 Loading model /data/ceph/zhansu/embedding/General_TinyBERT_4L_312D/pytorch_model.bin
+2021-01-26 17:10:09,951 loading model...
+2021-01-26 17:10:09,960 done!
+2021-01-26 17:10:09,961 Weights of TinyBertForSequenceClassification not initialized from pretrained model: ['classifier.weight', 'classifier.bias']
+2021-01-26 17:10:09,961 Weights from pretrained model not used in TinyBertForSequenceClassification: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.weight', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias']
+2021-01-26 17:10:09,978 ***** Running training *****
+2021-01-26 17:10:09,978   Num examples = 53417
+2021-01-26 17:10:09,979   Batch size = 12
+2021-01-26 17:10:09,979   Num steps = 22255
+2021-01-26 17:10:09,979 n: bert.embeddings.word_embeddings.weight
+2021-01-26 17:10:09,980 n: bert.embeddings.position_embeddings.weight
+2021-01-26 17:10:09,980 n: bert.embeddings.token_type_embeddings.weight
+2021-01-26 17:10:09,980 n: bert.embeddings.LayerNorm.weight
+2021-01-26 17:10:09,980 n: bert.embeddings.LayerNorm.bias
+2021-01-26 17:10:09,980 n: bert.encoder.layer.0.attention.self.query.weight
+2021-01-26 17:10:09,980 n: bert.encoder.layer.0.attention.self.query.bias
+2021-01-26 17:10:09,980 n: bert.encoder.layer.0.attention.self.key.weight
+2021-01-26 17:10:09,981 n: bert.encoder.layer.0.attention.self.key.bias
+2021-01-26 17:10:09,981 n: bert.encoder.layer.0.attention.self.value.weight
+2021-01-26 17:10:09,981 n: bert.encoder.layer.0.attention.self.value.bias
+2021-01-26 17:10:09,981 n: bert.encoder.layer.0.attention.output.dense.weight
+2021-01-26 17:10:09,981 n: bert.encoder.layer.0.attention.output.dense.bias
+2021-01-26 17:10:09,981 n: bert.encoder.layer.0.attention.output.LayerNorm.weight
+2021-01-26 17:10:09,981 n: bert.encoder.layer.0.attention.output.LayerNorm.bias
+2021-01-26 17:10:09,982 n: bert.encoder.layer.0.intermediate.dense.weight
+2021-01-26 17:10:09,982 n: bert.encoder.layer.0.intermediate.dense.bias
+2021-01-26 17:10:09,982 n: bert.encoder.layer.0.output.dense.weight
+2021-01-26 17:10:09,982 n: bert.encoder.layer.0.output.dense.bias
+2021-01-26 17:10:09,982 n: bert.encoder.layer.0.output.LayerNorm.weight
+2021-01-26 17:10:09,982 n: bert.encoder.layer.0.output.LayerNorm.bias
+2021-01-26 17:10:09,983 n: bert.encoder.layer.1.attention.self.query.weight
+2021-01-26 17:10:09,983 n: bert.encoder.layer.1.attention.self.query.bias
+2021-01-26 17:10:09,983 n: bert.encoder.layer.1.attention.self.key.weight
+2021-01-26 17:10:09,983 n: bert.encoder.layer.1.attention.self.key.bias
+2021-01-26 17:10:09,983 n: bert.encoder.layer.1.attention.self.value.weight
+2021-01-26 17:10:09,983 n: bert.encoder.layer.1.attention.self.value.bias
+2021-01-26 17:10:09,983 n: bert.encoder.layer.1.attention.output.dense.weight
+2021-01-26 17:10:09,983 n: bert.encoder.layer.1.attention.output.dense.bias
+2021-01-26 17:10:09,984 n: bert.encoder.layer.1.attention.output.LayerNorm.weight
+2021-01-26 17:10:09,984 n: bert.encoder.layer.1.attention.output.LayerNorm.bias
+2021-01-26 17:10:09,984 n: bert.encoder.layer.1.intermediate.dense.weight
+2021-01-26 17:10:09,984 n: bert.encoder.layer.1.intermediate.dense.bias
+2021-01-26 17:10:09,984 n: bert.encoder.layer.1.output.dense.weight
+2021-01-26 17:10:09,984 n: bert.encoder.layer.1.output.dense.bias
+2021-01-26 17:10:09,984 n: bert.encoder.layer.1.output.LayerNorm.weight
+2021-01-26 17:10:09,985 n: bert.encoder.layer.1.output.LayerNorm.bias
+2021-01-26 17:10:09,985 n: bert.encoder.layer.2.attention.self.query.weight
+2021-01-26 17:10:09,985 n: bert.encoder.layer.2.attention.self.query.bias
+2021-01-26 17:10:09,985 n: bert.encoder.layer.2.attention.self.key.weight
+2021-01-26 17:10:09,985 n: bert.encoder.layer.2.attention.self.key.bias
+2021-01-26 17:10:09,985 n: bert.encoder.layer.2.attention.self.value.weight
+2021-01-26 17:10:09,985 n: bert.encoder.layer.2.attention.self.value.bias
+2021-01-26 17:10:09,986 n: bert.encoder.layer.2.attention.output.dense.weight
+2021-01-26 17:10:09,986 n: bert.encoder.layer.2.attention.output.dense.bias
+2021-01-26 17:10:09,986 n: bert.encoder.layer.2.attention.output.LayerNorm.weight
+2021-01-26 17:10:09,986 n: bert.encoder.layer.2.attention.output.LayerNorm.bias
+2021-01-26 17:10:09,986 n: bert.encoder.layer.2.intermediate.dense.weight
+2021-01-26 17:10:09,986 n: bert.encoder.layer.2.intermediate.dense.bias
+2021-01-26 17:10:09,986 n: bert.encoder.layer.2.output.dense.weight
+2021-01-26 17:10:09,987 n: bert.encoder.layer.2.output.dense.bias
+2021-01-26 17:10:09,987 n: bert.encoder.layer.2.output.LayerNorm.weight
+2021-01-26 17:10:09,987 n: bert.encoder.layer.2.output.LayerNorm.bias
+2021-01-26 17:10:09,987 n: bert.encoder.layer.3.attention.self.query.weight
+2021-01-26 17:10:09,987 n: bert.encoder.layer.3.attention.self.query.bias
+2021-01-26 17:10:09,987 n: bert.encoder.layer.3.attention.self.key.weight
+2021-01-26 17:10:09,987 n: bert.encoder.layer.3.attention.self.key.bias
+2021-01-26 17:10:09,988 n: bert.encoder.layer.3.attention.self.value.weight
+2021-01-26 17:10:09,988 n: bert.encoder.layer.3.attention.self.value.bias
+2021-01-26 17:10:09,988 n: bert.encoder.layer.3.attention.output.dense.weight
+2021-01-26 17:10:09,988 n: bert.encoder.layer.3.attention.output.dense.bias
+2021-01-26 17:10:09,988 n: bert.encoder.layer.3.attention.output.LayerNorm.weight
+2021-01-26 17:10:09,988 n: bert.encoder.layer.3.attention.output.LayerNorm.bias
+2021-01-26 17:10:09,988 n: bert.encoder.layer.3.intermediate.dense.weight
+2021-01-26 17:10:09,989 n: bert.encoder.layer.3.intermediate.dense.bias
+2021-01-26 17:10:09,989 n: bert.encoder.layer.3.output.dense.weight
+2021-01-26 17:10:09,989 n: bert.encoder.layer.3.output.dense.bias
+2021-01-26 17:10:09,989 n: bert.encoder.layer.3.output.LayerNorm.weight
+2021-01-26 17:10:09,989 n: bert.encoder.layer.3.output.LayerNorm.bias
+2021-01-26 17:10:09,989 n: bert.pooler.dense.weight
+2021-01-26 17:10:09,989 n: bert.pooler.dense.bias
+2021-01-26 17:10:09,990 n: classifier.weight
+2021-01-26 17:10:09,990 n: classifier.bias
+2021-01-26 17:10:09,990 n: fit_dense.weight
+2021-01-26 17:10:09,990 n: fit_dense.bias
+2021-01-26 17:10:09,990 Total parameters: 14591258
